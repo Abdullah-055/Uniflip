@@ -1,0 +1,50 @@
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.about-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-box h1 {
+    font-size: 2.7rem;
+    color: #d77a61;
+    margin-bottom: 30px;
+}
+
+.about-box p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-box section {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-box section h2 {
+    font-size: 1.5rem;
+    color: #d77a61;
+    margin-bottom: 10px;
+}
+
+.about-box ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.about-box ul li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+}

@@ -1,0 +1,37 @@
+{% extends 'marketplace/base.html' %}
+{% load static %}
+
+{% block title %}{{ product.name }} - Uniflip{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'marketplace/css/product_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="product-detail-wrapper">
+
+    <div class="product-card">
+        <div class="product-image">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+                <img src="{% static 'marketplace/images/no_image.png' %}" alt="No Image">
+            {% endif %}
+        </div>
+
+        <div class="product-info">
+            <h1>{{ product.name }}</h1>
+            <p class="price">${{ product.price }}</p>
+            <p class="description">{{ product.description }}</p>
+
+            <div class="extra-info">
+                <p><strong>Seller:</strong> {{ seller.username }}</p>
+                <p><strong>Contact:</strong> {{ contact }}</p>
+            </div>
+
+            <a href="{% url 'marketplace:buy_product' product.id %}" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
