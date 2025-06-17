@@ -1,0 +1,32 @@
+{% extends 'marketplace/base.html' %}
+{% load static %}
+
+{% block title %}Register - Uniflip{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'marketplace/css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Register</h1>
+    <p>Create your account to start selling and buying on Uniflip.</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ request.POST.username }}" required>
+
+        <label for="password1">Password:</label>
+        <input type="password" id="password1" name="password1" required>
+
+        <label for="password2">Confirm Password:</label>
+        <input type="password" id="password2" name="password2" required>
+
+        <label for="contact_number">Contact Number:</label>
+        <input type="text" id="contact_number" name="contact_number" value="{{ request.POST.contact_number }}" required>
+
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
+</div>
+{% endblock %}

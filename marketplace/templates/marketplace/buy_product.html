@@ -1,0 +1,37 @@
+{% extends 'marketplace/base.html' %}
+{% load static %}
+
+{% block title %}Buy {{ product.name }} - Uniflip{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'marketplace/css/buy_product.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="buy-wrapper">
+    <div class="buy-card">
+        <h1>Buy {{ product.name }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="buyer_name">Your Name:</label>
+            <input type="text" id="buyer_name" name="buyer_name" >
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" >
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="4" ></textarea>
+
+            <button type="submit" class="place-order-btn">Place Order</button>
+        </form>
+    </div>
+</div>
+
+{% if messages %}
+    <div class="success-message">
+        {% for message in messages %}
+            🎉 {{ message }}
+        {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}

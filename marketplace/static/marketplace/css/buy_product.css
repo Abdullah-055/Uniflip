@@ -1,0 +1,72 @@
+.buy-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.buy-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.buy-card h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d77a61;
+  font-size: 2rem;
+}
+
+.buy-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.buy-card input, 
+.buy-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.place-order-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #d77a61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.place-order-btn:hover {
+  background-color: #c45a4c;
+  transform: scale(1.03);
+}
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
